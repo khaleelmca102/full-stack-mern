@@ -1,11 +1,30 @@
 {
   "name": "full-stack-mern",
   "version": "1.0.0",
-  "description": "",
+  "description": "Full Stack MERN Project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev:server": "tsnd  src/server/server.ts"
   },
-  "author": "",
-  "license": "ISC"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khaleelmca102/full-stack-mern.git"
+  },
+  "author": "Abdul Khaleel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/khaleelmca102/full-stack-mern/issues"
+  },
+  "homepage": "https://github.com/khaleelmca102/full-stack-mern#readme",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "typescript": "^5.1.6"
+  },
+  "devDependencies": {
+    "eslint": "^8.44.0",
+    "prettier": "^2.8.8",
+    "ts-node-dev": "^2.0.0"
+  }
 }
