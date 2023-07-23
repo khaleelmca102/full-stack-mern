@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import ContestPreview from "./contest-preview";
-import { fetchContests } from "../api-client";
+//import { fetchContestList } from "../api-client";
+import Header from "./header";
 
 const ContestList: any = ({
   initialContests,
@@ -8,11 +9,13 @@ const ContestList: any = ({
 }) => {
   const [contests, setContests] = useState(initialContests);
   useEffect(() => {
-    // fetchContests().then((contests) => {
+    // fetchContestList().then((contests) => {
     //     setContests(contests)
     // });
   }, []);
   return (
+    <>
+    <Header message="Naming Contests" />
     <div className="contest-list">
       {contests.map((contest) => {
         return (
@@ -24,6 +27,7 @@ const ContestList: any = ({
         );
       })}
     </div>
+    </>
   );
 };
 

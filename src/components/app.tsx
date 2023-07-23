@@ -1,13 +1,15 @@
 import { useState } from "react";
+import Contest from "./contest";
 import ContestList from "./contest-list";
-import Header from "./header";
 
 
 const App = ({ initialData }) => {    
     const [page, setPage] = useState("contestList");
+    const [currentContestId, setCurrentContestId] = useState();
     
-    const navigateToContest = () => {
+    const navigateToContest = (contestId) => {
         setPage("contest");
+        setCurrentContestId(contestId);
     }
 
     const pageContent = () => {
@@ -20,15 +22,14 @@ const App = ({ initialData }) => {
                      /> 
                 );
             case "contest":
-                return "..."            
+                return <Contest id={currentContestId}   />;  
             default:
                 break;
         }
     }
 
     return (
-        <div className="container">
-            <Header message="Naming Contests" />
+        <div className="container">           
             {pageContent()}
         </div>
     )
